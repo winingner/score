@@ -17,7 +17,6 @@ cd ../gods/dist
 git init
 git add -A
 git commit -m 'deploy'
-git branch -M master
 
 # 如果你想要部署到 https://USERNAME.github.io
 git push -f git@github.com:winingner/winingner.github.io.git master 

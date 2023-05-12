@@ -3,18 +3,21 @@ import { defaultTheme } from 'vuepress'
 export default {
     lang: 'zh-CN',
     title: '你好， VuePress ！',
-    description: '这是我的第一个 VuePress 站点',
+    description: '用于记录知识',
     locales: {
       '/': {
         lang: 'en-US',
-        title:'hello'
+        title:'个人站点'
       },
       '/zh/': {
         lang: 'zh-CN',
         title:'你好'
       },
     },
+    // 默认主题配置
     theme: defaultTheme({
+      // 头像
+      logo: '/assets/images/bear.webp',
       locales: {
         '/': {
           selectLanguageName: 'English',
@@ -23,7 +26,7 @@ export default {
           selectLanguageName: '简体中文',
         },
       },
-      // 默认主题配置
+      // 头部导航
       navbar: [
         {
           text: '首页',
@@ -34,43 +37,16 @@ export default {
           link:'/guide/'
         },
         {
-          text:'商品页',
+          text:'知识网站',
           link:'/goods/'
         },
-        // NavbarGroup
-        {
-          text: '组',
-          children: ['/group/foo.md', '/group/bar.md'],
-        },
-         // 控制元素何时被激活
-      {
-        text: 'Group 2',
-        children: [
-          {
-            text: 'Always active',
-            link: '/',
-            // 该元素将一直处于激活状态
-            activeMatch: '/',
-          },
-          {
-            text: 'Active on /foo/',
-            link: '/not-foo/',
-            // 该元素在当前路由路径是 /foo/ 开头时激活
-            // 支持正则表达式
-            activeMatch: '^/foo/',
-          },
-        ],
-      },
       ],
       colorMode:'auto',
       colorModeSwitch:true,
       home:'/',
-      logo: 'https://vuejs.org/images/logo.png',
-      // repo: 'https://gitlab.com/foo/bar',
-      // repoLabel:'地址',
       selectLanguageText:'语言',
       selectLanguageAriaLabel:'',
-
+      // 侧边栏
       sidebar: {
         '/guide/': [
           {
